@@ -1,9 +1,18 @@
-body {
+html {
     background: #ff1807;
+    font-family: 'Space Mono', monospace ;
 }
-.container {
-    background-color: red;
-    font-family: Arial;
-    height:1000px;
+.container-fluid {
+    background: #ff1807;
     font-family: 'Space Mono', monospace;
+    color:aliceblue;
 }
+h1{
+    font-size: 100px;
+    margin-top: -5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
