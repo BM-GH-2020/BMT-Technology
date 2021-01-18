@@ -5,10 +5,25 @@ html {
 .container-fluid {
     background: #ff1807;
     font-family: 'Space Mono', monospace;
-
     color:aliceblue;
 }
-h1{
+
+.row {
+  margin: 10px;
+  margin: auto 0;
+}
+.section_2 {
+    height: 20px;
+    background: #ff1807;
+    color:aliceblue;
+    margin-bottom: 15px;
+  }
+.form-control {
+    background: #ff1807;
+}
+
+
+h1 {
     font-size: 100px;
     margin-top: -5px;
 }
@@ -18,14 +33,62 @@ h1{
     height: auto;
   }
 
-  .form-group{
+  .form-group {
      border-radius: 0;
+     background: #ff1807;
   }
-
-}
+  
 
 img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+}
+
+#formGroupExampleInput {
+    background: #ff1807;
+    color:aliceblue;
+    border: 1px solid aliceblue;
+}
+
+#formGroupExampleInput2 {
+    color:aliceblue;
+    border: 1px solid aliceblue;
+}
+
+#roles {
+    margin-top: 50px;
+    background: #ff1807;
+    color:aliceblue;
+}
+
+#assign {
+    background: #ff1807;
+    color:aliceblue;
+}
+
+#date {
+    background: #ff1807;
+    color:aliceblue;
+    border: 1px solid aliceblue;
+    margin-top: -5px;
+}
+
+#button {
+    color: #ff1807;
+    background:aliceblue;
+}
+
+.col-sm-4 > .btn {
+    margin-top: 175px;
+    color: #ff1807;
+}
+
+#card {
+    color: black;
+}
+
+.card-body > .btn > a {
+  text-decoration: none;
+  color: aliceblue;
 }
 
