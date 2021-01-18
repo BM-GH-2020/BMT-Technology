@@ -34,11 +34,10 @@ h1 {
   }
 
   .form-group {
-     border-radius: 0;
-     background: #ff1807;
+     background: #ff1807 !important;
+    
   }
   
-
 img {
     height: 300px;
     width: 300px;
@@ -48,9 +47,24 @@ img {
     background: #ff1807;
     color:aliceblue;
     border: 1px solid aliceblue;
+    border-radius: 0;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:rgb(245, 176, 176) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:rgb(245, 176, 176) !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:rgb(245, 176, 176) !important;
+  }
+
 #formGroupExampleInput2 {
+    background: #ff1807;
     color:aliceblue;
     border: 1px solid aliceblue;
 }
@@ -58,29 +72,28 @@ img {
 #roles {
     margin-top: 50px;
     background: #ff1807;
-    color:aliceblue;
+    color:aliceblue;   
 }
 
 #assign {
     background: #ff1807;
-    color:aliceblue;
+    color:aliceblue;   
 }
 
 #date {
     background: #ff1807;
     color:aliceblue;
     border: 1px solid aliceblue;
-    margin-top: -5px;
+    margin-top: -5px;   
 }
 
 #button {
     color: #ff1807;
-    background:aliceblue;
+    background:aliceblue; 
 }
 
 .col-sm-4 > .btn {
     margin-top: 175px;
-    color: #ff1807;
 }
 
 #card {
@@ -91,4 +104,3 @@ img {
   text-decoration: none;
   color: aliceblue;
 }
-
