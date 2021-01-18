@@ -8,6 +8,10 @@ html {
     color:aliceblue;
 }
 
+.form-group > ::placeholder {
+    color:aliceblue;
+}
+
 .row {
   margin: 10px;
   margin: auto 0;
@@ -85,6 +89,7 @@ img {
 
 #card {
     color: black;
+    margin: 5px;
 }
 
 .card-body > .btn > a {
@@ -92,3 +97,8 @@ img {
   color: aliceblue;
 }
 
+main {
+    display: flex;
+    justify-content:start;
+    flex-wrap:wrap;
+}
