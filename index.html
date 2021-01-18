@@ -32,10 +32,16 @@
         </section>
 
       </header>
-        <!-- This is the second row for the form -->
-        <section class="row">
+      <br />
+      <!-- Job Inquiries Header-->
+      <section class="row">
+        <h3>Job Inquiries</h3>
+      </section>
 
-          <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+        <!-- This is the second row for the form -->
+        <section class="row align-items-center">
+
+          <div class="col-sm-3 col-md-5 col-lg-5 col-xl-3">
 
             <form>
               <div class="form-group">
@@ -46,39 +52,65 @@
                 <label class="pb-2 mt-3" for="formGroupExampleInput2">About yourself:</label>
                 <input type="text" class="form-control pb-5 border-0" id="formGroupExampleInput2" placeholder="I am dedicated and hardworking.">
               </div>
-            </form> 
           </div>
-          <div class="col-sm-12">Form section 2</div>
-          <div class="col-sm-12">Form section 3</div>
+          <br />
 
-          <form>
-            <div class="col">Form section 1</div>
-            <div class="col-4">
+          <div class="col-sm-3">
 
-              <select class="form-control form-control-sm">
-                  <option>Role:</option>
-                  <option>UX Designer</option>
-                  <option>Junior Developer</option>
-                  <option>Software Engineer</option>
-                  <option>Senior Developer</option>
+            <select class="section_2 form-control form-control-sm" id="roles">
+                <option>Role:</option>
+                <option>UX Designer</option>
+                <option>Junior Developer</option>
+                <option>Software Engineer</option>
+                <option>Senior Developer</option>
+                <option>Tech Lead</option>
+            </select>
+            <br />
+
+            <select class="section_2 form-control form-control-sm" id="assign">
+                  <option>Assign to:</option>
+                  <option>Senior design Manager</option>
+                  <option>senior Developer</option>
                   <option>Tech Lead</option>
-              </select>
-                  
+                  <option>CTO</option>
+                  <option>Human Resources</option>
+            </select>
+            <br />
 
-              <select class="form-control form-control-sm">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+            <input type="date" id="date" name="birthday" class="form-control-sm">
+          </div>
 
+          <div class="col-sm-4 align-items-end offset-lg-1">
+            <button type="submit" class="btn btn-light" id="button">Submit</button>
+          </div>
 
-            </div>
-            <div class="col">Form section 3</div>
-          </form>
-
+          
+        </form> 
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <main>
+          <div class="card" style="width: 18rem;" id="card">
+            <div class="card-body">
+              <h5 class="card-title">Inquiry Role Inquiry</h5>
+              <h6 class="card-subtitle mb-2 text-muted">John Doe</h6>
+              <br />
+              <p class="card-text">Hello. just wanted to inquire concerning any possible vacancy on the Tech Lead position.I am an ex-Google, ex-Facebook Tech Lead with ample experience, and would like to </p>
+              <button type="button" class="btn btn-success"><a href="#" class="card-link">Respond</a></button>
+              <button type="button" class="btn btn-danger"><a href="#" class="card-link">Delete</a></button>
+            </div>
+          </div>
+        </main>
     </div>
 </body>
 </html>
