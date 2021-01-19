@@ -92,12 +92,18 @@ img {
     background:aliceblue; 
 }
 
+.list-group-item {
+    visibility: hidden;
+}
+
 .col-sm-4 > .btn {
     margin-top: 175px;
 }
 
 #card {
     color: black;
+    width:auto;
+    visibility: visible;
 }
 
 .card-body > .btn > a {
