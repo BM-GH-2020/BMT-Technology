@@ -1,5 +1,7 @@
+
+
 html {
-    background: #ff1807;
+    background: /*#ff1807*/;
     font-family: 'Space Mono', monospace ;
 }
 .container-fluid {
@@ -14,12 +16,12 @@ html {
 }
 .section_2 {
     height: 20px;
-    background: #ff1807;
+    background: white/*#ff1807*/;
     color:aliceblue;
     margin-bottom: 15px;
   }
 .form-control {
-    background: #ff1807;
+    background: /*#ff1807*/;
 }
 
 
@@ -34,7 +36,7 @@ h1 {
   }
 
   .form-group {
-     background: #ff1807 !important;
+     background:  #ff1807 !important;
     
   }
   
@@ -44,7 +46,7 @@ img {
 }
 
 #formGroupExampleInput {
-    background: #ff1807;
+    background:/*#ff1807*/;
     color:aliceblue;
     border: 1px solid aliceblue;
     border-radius: 0;
@@ -64,7 +66,7 @@ img {
   }
 
 #formGroupExampleInput2 {
-    background: #ff1807;
+    background: /*#ff1807*/;
     color:aliceblue;
     border: 1px solid aliceblue;
 }
@@ -104,3 +106,6 @@ img {
   text-decoration: none;
   color: aliceblue;
 }
+
+
+
