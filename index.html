@@ -49,7 +49,7 @@
             <form class="needs-validation" novalidate>
               <div class="form-group">
                 <label class="pb-2 mt-3" for="formGroupExampleInput">Name:</label>
-                <input type="text" class="form-control isvalid" id="formGroupExampleInput" placeholder="Arnold Smith" required>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Arnold Smith" required>
                   <div class="invalid-feedback">
                     First Name needs to be 3 characters long or more
                 </div>
@@ -57,7 +57,8 @@
               <div class="form-group">
                 <label class="pb-2 mt-3" for="formGroupExampleInput2">About yourself:</label>
                 <input type="text" class="form-control pb-5" id="formGroupExampleInput2" placeholder="I am dedicated and hardworking." required>
-                  <div class="invalid-feedback">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">
                     About me section needs to be at least 10 characters or more
                   </div>
               </div>
@@ -67,7 +68,6 @@
           <div class="col-sm-12 col-md-5 col-xl-3">
      
                 <select class="section_2 form-control form-select form-control-sm mt-n1" id="roles" required>
-                <option selected disabled value>Roles:</option>
                 <option>UX Designer</option>
                 <option>Junior Developer</option>
                 <option>Software Engineer</option>
@@ -80,8 +80,7 @@
             <br />
 
             <select class="section_2 form-control form-select form-control-sm" id="assign" required>
-                  <option selected disabled value>Assign to:</option>
-                  <option>Senior design Manager</option>
+                  <option selected>Senior design Manager</option>
                   <option>senior Developer</option>
                   <option>Tech Lead</option>
                   <option>CTO</option>
