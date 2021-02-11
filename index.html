@@ -14,8 +14,8 @@
 </head>
 
 
-<body>
-    <div class="container-fluid p-5" style="background-color:#ff1807;"></div>
+<body class="container-fluid p-5">
+    <div class="container-fluid p-5"></div>
         <header>
         <!-- This is the row for all the upper content. Includes Company logo, descritption and image -->
         
@@ -67,7 +67,8 @@
 
           <div class="col-sm-12 col-md-5 col-xl-3">
      
-                <select class="section_2 form-control form-select form-control-sm mt-n1" id="roles" required>
+                <select class="section_2 form-control form-select form-control-sm mt-n1"  id="roles" required>
+                <option value="" selected disabled>Select role ↓</option>
                 <option>UX Designer</option>
                 <option>Junior Developer</option>
                 <option>Software Engineer</option>
@@ -80,7 +81,8 @@
             <br />
 
             <select class="section_2 form-control form-select form-control-sm" id="assign" required>
-                  <option selected>Senior design Manager</option>
+                  <option value="" selected disabled>Assign to ↓</option>
+                  <option >Senior design Manager</option>
                   <option>senior Developer</option>
                   <option>Tech Lead</option>
                   <option>CTO</option>
@@ -91,7 +93,7 @@
                   </div>
             <br />
 
-            <input type="date" id="date" name="birthday" class="form-control-sm" required>
+            <input type="date" id="date" class="form-control-sm" required>
             <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">
                     First Name needs to be 3 characters long or more
@@ -109,13 +111,7 @@
         <br />
         <br />
         <br />
-        <br />
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
 
         <main>
           <ul class="list-group">
@@ -225,5 +221,6 @@ src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 crossorigin="anonymous"
 ></script>
-<script src="js/script.js"></script>
+<script src="js/taskManager.js"></script>
+<script src="js/index.js"></script>
 </html>

@@ -1,11 +1,11 @@
 
 
 html {
-    background: /*#ff1807*/;
+    background:  #b2b1ca;
     font-family: 'Space Mono', monospace ;
 }
 .container-fluid {
-    background: #ff1807;
+    background:  #b2b1ca;
     font-family: 'Space Mono', monospace;
     color:aliceblue;
 }
@@ -16,12 +16,12 @@ html {
 }
 .section_2 {
     height: 20px;
-    background: white/*#ff1807*/;
-    color:aliceblue;
+    background:  #b2b1ca;
+    color #b2b1ca;
     margin-bottom: 15px;
   }
 .form-control {
-    background: /*#ff1807*/;
+    background:  #b2b1ca;
 }
 
 
@@ -36,7 +36,7 @@ h1 {
   }
 
   .form-group {
-     background:  #ff1807 !important;
+     background:  #b2b1ca; !important;
     
   }
   
@@ -46,51 +46,51 @@ img {
 }
 
 #formGroupExampleInput {
-    background:/*#ff1807*/;
+    background: #b2b1ca;
     color:aliceblue;
     border: 1px solid aliceblue;
     border-radius: 0;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color:rgb(245, 176, 176) !important;
+    color:rgb(202, 202, 202) !important;
     opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:rgb(245, 176, 176) !important;
+    color:rgb(202, 202, 202) !important;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color:rgb(245, 176, 176) !important;
+    color:rgb(202, 202, 202) !important;
   }
 
 #formGroupExampleInput2 {
-    background: /*#ff1807*/;
-    color:aliceblue;
+    background:  #b2b1ca;
+    color:rgb(32, 32, 32);
     border: 1px solid aliceblue;
 }
 
 #roles {
     margin-top: 50px;
-    background: wh;
+    background:   #b2b1ca;;
     color:aliceblue;   
 }
 
 #assign {
-    background: white;
+    background:   #b2b1ca;
     color:aliceblue;   
 }
 
 #date {
-    background: #ff1807;
+    background:  #b2b1ca;
     color:aliceblue;
     border: 1px solid aliceblue;
     margin-top: -5px;   
 }
 
 #button {
-    color: #ff1807;
+    color:  #b2b1ca;
     background:aliceblue; 
 }
 

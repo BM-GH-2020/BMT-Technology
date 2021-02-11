@@ -1,4 +1,4 @@
-
+const taskManager = new TaskManager(0);
   
 
 let form = document.querySelector("form");
@@ -14,14 +14,23 @@ let validation = document.querySelector(".valid-feedback");
 
 
 
-
-
-      
- 
-
 form.addEventListener('submit', event => {
     event.preventDefault();
     
+    const clearFormFields = () => {
+      userName.value = "";
+      about.value = "";
+      roles.value = "Select role";
+      assign.value = "Assign to";
+      dateField.value = "yyyy-MM-dd";
+      userName.classList.remove("is-valid");
+      about.classList.remove("is-valid");
+      roles.classList.remove("is-valid");
+      assign.classList.remove("is-valid");
+      dateField.classList.remove("is-valid");
+    };
+
+
     let validationFailure = 0;
 
     if (userName.value.length < 5) {
@@ -63,7 +72,30 @@ form.addEventListener('submit', event => {
       validationFailure++;
     }
 
-    if (validationFailure === 0) {
-      //taskmanager.addtask
+
+  // If the validation fails, the function will not work
+
+    if (validationFailure > 0) {
+      validationFailure = 0;
+      return;
+    } else {
+
+      taskManager.addTask(
+        userName.value,
+        about.value,
+        roles.value,
+        assign.value,
+        dateField.value
+      );
+      clearFormFields();
     }
 });
+
+console.log(taskManager.tasks);
+
+
+
+
+
+// const newtask = new taskManager('Apply for this job');
+// console.log(newtask.tasks);
