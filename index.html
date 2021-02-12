@@ -50,7 +50,10 @@
               <div class="form-group">
                 <label class="pb-2 mt-3" for="formGroupExampleInput">Name:</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Arnold Smith" required>
-                  <div class="invalid-feedback">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>  
+                <div class="invalid-feedback">
                     First Name needs to be 3 characters long or more
                 </div>
               </div>
@@ -75,28 +78,28 @@
                 <option>Senior Developer</option>
                 <option>Tech Lead</option>
             </select>
+            <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">
-                    Choose a valid option!
+                    Choose a role!
                   </div>
             <br />
 
             <select class="section_2 form-control form-select form-control-sm" id="assign" required>
                   <option value="" selected disabled>Assign to ↓</option>
                   <option >Senior design Manager</option>
-                  <option>senior Developer</option>
+                  <option>Senior Developer</option>
                   <option>Tech Lead</option>
                   <option>CTO</option>
                   <option>Human Resources</option>
             </select>
-                  <div class="invalid-feedback">
-                    Choose a valid option!
+            <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback"> Assign to someone!
                   </div>
             <br />
 
-            <input type="date" id="date" class="form-control-sm" required>
-            <div class="valid-feedback">Looks good!</div>
+            <input type="date" id="date" name= "dateField" class="form-control-sm" required>
                   <div class="invalid-feedback">
-                    First Name needs to be 3 characters long or more
+                    Choose a valid date!
                   </div>
           </div>
 
@@ -115,7 +118,7 @@
 
         <main>
           <ul class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item" id="tasksList">
               <div class="card" style="width: 25rem;" id="card">
                 <div class="card-body">
                   <h5 class="card-title">Tech Lead Role Inquiry</h5>

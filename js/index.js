@@ -13,7 +13,6 @@ let validation = document.querySelector(".valid-feedback");
 
 
 
-
 form.addEventListener('submit', event => {
     event.preventDefault();
     
@@ -22,7 +21,7 @@ form.addEventListener('submit', event => {
       about.value = "";
       roles.value = "Select role";
       assign.value = "Assign to";
-      dateField.value = "yyyy-MM-dd";
+      dateField.value = "";
       userName.classList.remove("is-valid");
       about.classList.remove("is-valid");
       roles.classList.remove("is-valid");
@@ -32,6 +31,16 @@ form.addEventListener('submit', event => {
 
 
     let validationFailure = 0;
+
+
+    console.log("Name: " + userName.value);
+    console.log("About: " + about.value);
+    console.log("Assigned to: " + assign.value);
+    console.log("Date submitted: " + dateField.value);
+    console.log("Role: " + roles.value);
+
+
+  //validation conditions
 
     if (userName.value.length < 5) {
       userName.classList.add("is-invalid"); 
@@ -46,16 +55,32 @@ form.addEventListener('submit', event => {
         about.classList.add("is-invalid"); 
       about.classList.remove("is-valid");  
       validationFailure++;
-    } else if (userName.value.length > 10) {
-        userName.classList.remove("is-invalid"); 
-        userName.classList.add("is-valid");
+    } else if (about.value.length > 10) {
+        about.classList.remove("is-invalid"); 
+        about.classList.add("is-valid");
       }
-   /* if (dateField === NaN) {
-        dateField.classList.add("is-invalid"); 
+      
+    if (dateField === NaN) {
+      // dateField.classList.remove("is-invalid"); 
+      dateField.classList.add("is-valid");
+      
+    } else if (!dateField === NaN) {
+      // dateField.classList.add("is-invalid"); 
       dateField.classList.remove("is-valid"); 
-    } */
+    } 
+
+
+    if (roles.value) {
+        roles.classList.remove("is-invalid"); 
+      roles.classList.add("is-valid");  
+    } else if (!roles.value) {
+        roles.classList.add("is-invalid"); 
+        roles.classList.remove("is-valid");
+      validationFailure++;
+    }
+
      if (assign.value) {
-        assign.classList.remove("is-invalid"); 
+      assign.classList.remove("is-invalid"); 
       assign.classList.add("is-valid");  
     } else if (!assign.value) {
         assign.classList.add("is-invalid"); 
@@ -63,14 +88,6 @@ form.addEventListener('submit', event => {
       validationFailure++;
     }
 
-    if (roles.value) {
-        roles.classList.remove("is-invalid"); 
-      roles.classList.add("is-valid");  
-    } else if (!roles.value) {
-        roles.classList.add("is-invalid"); 
-      roles.classList.remove("is-valid");
-      validationFailure++;
-    }
 
 
   // If the validation fails, the function will not work
@@ -88,14 +105,17 @@ form.addEventListener('submit', event => {
         dateField.value
       );
       clearFormFields();
+      taskManager.render();
     }
 });
 
-console.log(taskManager.tasks);
-
-
-
+// console.log(taskManager.tasks);
 
 
 // const newtask = new taskManager('Apply for this job');
 // console.log(newtask.tasks);
+
+
+let taskHtml = createTaskHtml('John', 'About me', 'lucy', 'Tech lead', 12/04/2021);
+
+console.log(taskHtml);
