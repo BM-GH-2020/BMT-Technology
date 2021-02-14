@@ -1,5 +1,4 @@
-
-  
+const taskManager = new TaskManager(0);
 
 let form = document.querySelector("form");
 let userName = document.querySelector("#formGroupExampleInput");
@@ -14,15 +13,32 @@ let validation = document.querySelector(".valid-feedback");
 
 
 
-
-
-      
- 
-
 form.addEventListener('submit', event => {
     event.preventDefault();
-    
+
+    //clear form fields after submission
+
+    const clearFormFields = () => {
+      userName.value = "";
+      about.value ="";
+      roles.value = "Select role";
+      assign.value = "Assign to";
+      dateField.value = "Select date";
+      userName.classList.remove("is-valid");
+      about.classList.remove("is-valid");
+      roles.classList.remove("is-valid");
+      assign.classList.remove("is-valid");
+      dateField.classList.remove("is-valid");
+    };
+
+    console.log("Task Name :" + userName.value);
+    console.log("Task About :" + about.value);
+    console.log("Task Roles :" + roles.value);
+    console.log("Task Assign :" + assign.value);
+    console.log("Task Date :" + dateField.value);
+
     let validationFailure = 0;
+
 
     if (userName.value.length < 5) {
       userName.classList.add("is-invalid"); 
@@ -63,7 +79,21 @@ form.addEventListener('submit', event => {
       validationFailure++;
     }
 
-    if (validationFailure === 0) {
-      //taskmanager.addtask
+    //if validation fails
+
+    if (validationFailure > 0) {
+      validationFailure = 0;
+      return;
+    } else {
+    
+
+      taskManager.addTask(
+      userName.value,
+      about.value,
+      roles.value,
+      assign.value,
+      dateField.value
+      );
+      clearFormFields();
     }
 });
