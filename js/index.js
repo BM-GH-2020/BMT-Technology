@@ -16,24 +16,36 @@ let validation = document.querySelector(".valid-feedback");
 
 form.addEventListener('submit', event => {
     event.preventDefault();
+
+   /* taskManager.addTask(
+        userName.value,
+        about.value,
+        roles.value,
+        assign.value,
+        dateField.value
+    ) */
+    
+    
     
     const clearFormFields = () => {
       userName.value = "";
       about.value = "";
       roles.value = "Select role";
       assign.value = "Assign to";
-      dateField.value = "yyyy-MM-dd";
+      dateField.value = "dd-mm-yyyy";
       userName.classList.remove("is-valid");
       about.classList.remove("is-valid");
       roles.classList.remove("is-valid");
       assign.classList.remove("is-valid");
       dateField.classList.remove("is-valid");
+
     };
 
 
     let validationFailure = 0;
 
     if (userName.value.length < 5) {
+      console.log(userName.value);
       userName.classList.add("is-invalid"); 
       userName.classList.remove("is-valid"); 
       validationFailure++;
@@ -42,11 +54,11 @@ form.addEventListener('submit', event => {
       userName.classList.add("is-valid");
     }
 
-    if(about.value.length < 10) {
+    if(about.value.length < 4) {
         about.classList.add("is-invalid"); 
       about.classList.remove("is-valid");  
       validationFailure++;
-    } else if (userName.value.length > 10) {
+    } else if (userName.value.length > 4) {
         userName.classList.remove("is-invalid"); 
         userName.classList.add("is-valid");
       }
@@ -79,19 +91,22 @@ form.addEventListener('submit', event => {
       validationFailure = 0;
       return;
     } else {
-
+      console.log(userName.value)
       taskManager.addTask(
+       
         userName.value,
         about.value,
         roles.value,
         assign.value,
         dateField.value
       );
+      
       clearFormFields();
+      taskManager.render();
     }
 });
 
-console.log(taskManager.tasks);
+
 
 
 
