@@ -11,8 +11,6 @@ let invalidation = document.querySelector(".invalid-feedback");
 let validation = document.querySelector(".valid-feedback");
 
 
-
-
 form.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -23,7 +21,7 @@ form.addEventListener('submit', event => {
       about.value ="";
       roles.value = "Select role";
       assign.value = "Assign to";
-      dateField.value = "Select date";
+      dateField.value = "dd-mm-yyyy";
       userName.classList.remove("is-valid");
       about.classList.remove("is-valid");
       roles.classList.remove("is-valid");
@@ -85,6 +83,8 @@ form.addEventListener('submit', event => {
       validationFailure = 0;
       return;
     } else {
+      
+      console.log(userName.value)
     
 
       taskManager.addTask(
@@ -95,5 +95,6 @@ form.addEventListener('submit', event => {
       dateField.value
       );
       clearFormFields();
+      taskManager.render();
     }
 });
