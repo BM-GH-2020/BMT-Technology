@@ -7,7 +7,7 @@ html {
 .container-fluid {
     background:  #b2b1ca;
     font-family: 'Space Mono', monospace;
-    color:aliceblue;
+    color:rgb(255, 255, 255);
 }
 
 .row {
@@ -17,7 +17,7 @@ html {
 .section_2 {
     height: 20px;
     background:  #b2b1ca;
-    color #b2b1ca;
+    color: #b2b1ca;
     margin-bottom: 15px;
   }
 .form-control {
@@ -36,7 +36,7 @@ h1 {
   }
 
   .form-group {
-     background:  #b2b1ca; !important;
+     background: #b2b1ca;
     
   }
   
@@ -67,19 +67,19 @@ img {
 
 #formGroupExampleInput2 {
     background:  #b2b1ca;
-    color:rgb(32, 32, 32);
+    color:rgb(255, 255, 255);
     border: 1px solid aliceblue;
 }
 
 #roles {
     margin-top: 50px;
     background:   #b2b1ca;;
-    color:aliceblue;   
+    color:rgb(255, 255, 255);   
 }
 
 #assign {
     background:   #b2b1ca;
-    color:aliceblue;   
+    color:rgb(255, 255, 255);   
 }
 
 #date {
@@ -94,24 +94,30 @@ img {
     background:aliceblue; 
 }
 
-.list-group-item {
+/* .list-group-item {
     visibility: hidden;
-}
+} */
 
 .col-sm-4 > .btn {
     margin-top: 175px;
 }
 
-#card {
-    color: black;
+/* #card {
+    color: rgb(3, 3, 3);
     width:auto;
     visibility: visible;
-}
+} */
 
-.card-body > .btn > a {
+/* .card-body > .btn > a {
   text-decoration: none;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+} */
+
+
+.list-group {
+    /* display: flex;
+    flex-wrap: wrap;
+     */
+    color: black;
+    margin: -10px;
 }
-
-
-

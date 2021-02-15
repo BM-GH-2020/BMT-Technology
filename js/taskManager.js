@@ -1,29 +1,32 @@
-let createTaskHtml = (name, about, assign, roles, date) => {
+let createTaskHtml = (userName, about, assign, roles, dateField) => {
 
     const html =
-    `<li class="list-group-item">
-              <div class="card" style="width: 25rem;" id="card">
-                <div class="card-body">
-                  <h5 class="card-title">${roles}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">${name}</h6>
-                  <br />
-                  <p class="card-text">${about} </p>
-                  <br />
-                  <h6 class="card-subtitle mb-2"> ${name}</h6>
-                  <h6 class="card-subtitle mb-2 text-muted">${date}</h6>
-                  <br />
-                  <button type="button" class="btn btn-success"><a href="#" class="card-link">Respond</a></button>
-                  <button type="button" class="btn btn-danger"><a href="#" class="card-link">Delete</a></button>
+    `<li class="card  list-group-horizontal col-md-5 col-lg-5 col-xl-3 mx-2" style="min-width: 20%">
+        <div class="card-body">
+            <h5 class="card-title">${userName}</h5>
+            <p class="card-text"> ${about}</p>
+            <p class="card-text"> Position: ${roles} </p>
+            <p class="card-text"> Assigned to: ${assign}</p>
+            
+            <div class="card-footer row">
+                <div class="col-6">
+                     <p class="card-text"> <b>${dateField}</b> </p>
                 </div>
-              </div>
-            </li>`;
+                <div class="col-3 col-sm-3">
+                    <button class="btn btn-outline-success done-button"> Done </button>
+                 </div>
+
+            <div class="col-3">
+            <button class="btn btn-outline-danger delete-button"> Delete </button>
+            </div>
+            
+            </div>
+        </div>
+    </li>`;
     
     return html;
 
 };
-
-
-
 
 
 // Create TaskManager class
@@ -36,6 +39,7 @@ class TaskManager {
 
 
 addTask(userName, about, roles, assign, dateField) {
+   
     this.currentId++
 
     const task = {
@@ -52,12 +56,13 @@ addTask(userName, about, roles, assign, dateField) {
 
 render(){
     const tasksHtmlList = [];
-    for (let i = 0; i < tasksHtmlList.length; i++) {
+    for (let i = 0; i < this.tasks.length; i++) {
         const task = this.tasks[i];
+        
         const date = new Date(task.dateField);
         const formattedDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
 
-        const taskHtml = createTaskHtml(
+        let taskHtml = createTaskHtml(
             task.userName,
             task.about,
             task.assign,
@@ -66,13 +71,15 @@ render(){
         );
         
         tasksHtmlList.push(taskHtml);
-    }
+    };
 
-    const tasksHtml = tasksHtmlList.join('\n');
-    const taskList = document.querySelector("#tasksList");
+    let tasksHtml = tasksHtmlList.join('\n');
+    
+    const taskList = document.querySelector("#tasks-list");
     taskList.innerHTML = tasksHtml;
 
 }
 
 }
+
 

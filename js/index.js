@@ -116,6 +116,20 @@ form.addEventListener('submit', event => {
 // console.log(newtask.tasks);
 
 
-let taskHtml = createTaskHtml('John', 'About me', 'lucy', 'Tech lead', 12/04/2021);
+// let taskHtml = createTaskHtml('John', 'About me', 'lucy', 'Tech lead', 12/04/2021);
+// console.log(taskHtml);
 
-console.log(taskHtml);
+
+//Task seven
+
+// const tasksList = document.querySelector('#tasksList')
+
+// tasksList.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('respond-button')){
+
+//     const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+
+//   }
+
+// });
+
