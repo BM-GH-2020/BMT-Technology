@@ -1,5 +1,4 @@
 
-
 html {
     background:  #b2b1ca;
     font-family: 'Space Mono', monospace ;
@@ -16,9 +15,10 @@ html {
 }
 .section_2 {
     height: 20px;
-    background:  #b2b1ca;
-    color #b2b1ca;
-    margin-bottom: 15px;
+    background: #b2b1ca;
+    color: #b2b1ca;
+    margin-top: 
+    /* margin-bottom: 15px; */
   }
 .form-control {
     background:  #b2b1ca;
@@ -36,7 +36,7 @@ h1 {
   }
 
   .form-group {
-     background:  #b2b1ca; !important;
+     background:  #b2b1ca !important;
     
   }
   
@@ -71,8 +71,14 @@ img {
     border: 1px solid aliceblue;
 }
 
+#new-task-status{
+    background:  #b2b1ca;
+    color:rgb(255, 255, 255);
+    border: 1px solid aliceblue;
+}
+
 #roles {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background:   #b2b1ca;;
     color:aliceblue;   
 }
@@ -89,9 +95,9 @@ img {
     margin-top: -5px;   
 }
 
-#new-task-status {
+/* #new-task-status {
     max-width: 25vw;
-}
+} */
 
 #button {
     color:  #b2b1ca;

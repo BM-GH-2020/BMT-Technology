@@ -1,4 +1,6 @@
 const taskManager = new TaskManager(0);
+taskManager.load();
+taskManager.render();
 
 let form = document.querySelector("form");
 let userName = document.querySelector("#formGroupExampleInput");
@@ -106,6 +108,7 @@ form.addEventListener("submit", (event) => {
 
     clearFormFields();
     taskManager.render();
+    taskManager.save();
   }
 });
 
@@ -121,10 +124,14 @@ taskList.addEventListener("click", (event) => {
     let taskId = Number(parentTask.dataset.taskId);
     let task = taskManager.getTaskById(taskId);
     task.status = "DONE";
+    taskManager.save();
     taskManager.render();
-    console.log(task.status.value);
+    
+    // console.log(task.status.value);
   }
 });
 
-// const newtask = new taskManager('Apply for this job');
-// console.log(newtask.tasks);
+
+
+
+console.log(taskHTML);

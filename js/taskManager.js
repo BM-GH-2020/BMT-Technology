@@ -3,8 +3,8 @@ const createTaskHtml = (
   id,
   userName,
   about,
-  roles,
   assign,
+  roles,
   dateField,
   status
 ) => {
@@ -13,11 +13,9 @@ const createTaskHtml = (
         <li class="card" style="min-width: 25vw" data-task-id="${id}">
             <div class="card-body">
                 <h5 class="card-title">${userName}</h5>
-                <p class="card-text">
-                ${about}
-                </p>
-                <p class="card-text">${roles} To</p>
-                <p class="card-text">${assign}</p>
+                <p class="card-text"> ${about} </p>
+                <p class="card-text"> Assigned to: ${assign}</p>
+                <p class="card-text"> Position: ${roles} </p>
                 <div class="card-footer row">
                     <div class="col-6">
                         <p class="card-text"><b>${dateField}</b></p>
@@ -83,7 +81,7 @@ class TaskManager {
     this.tasks.forEach((task) => {
       //console.log(task);
       let date = new Date(task.dateField);
-      let formattedDate = `Submitted on: ${Number(
+      let formattedDate = `Submitted on: ${Number (
         (date.getDay(this.dateField),
         date.getMonth(this.dateField),
         date.getYear(this.dateField))
@@ -102,4 +100,33 @@ class TaskManager {
     let taskHtml = `${tasksHtmlList.join("\n")}`;
     document.getElementById("tasks-list").innerHTML = taskHtml;
   }
+
+
+
+save(){
+
+  const tasksJson = JSON.stringify(this.tasks);
+  localStorage.setItem('tasks', tasksJson);
+  
+  const currentId = JSON.stringify(this.currentId);
+  localStorage.setItem('currentId', currentId);
 }
+
+load(){
+  if (localStorage.getItem('tasks')) {
+    const tasksJson = localStorage.getItem('tasks');
+  
+  this.tasks = JSON.parse(tasksJson);
+  }
+  
+  if (localStorage.getItem('currentId')) {
+    const currentId = localStorage.getItem('currentId');
+  
+  this.currentId = JSON.parse(currentId);
+  }
+}
+
+
+}
+
+

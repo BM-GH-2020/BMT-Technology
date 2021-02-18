@@ -15,7 +15,7 @@
 
 
 <body class="container-fluid p-5">
-    <div class="container-fluid p-5"></div>
+    <!-- <div class="container-fluid p-5"></div> -->
         <header>
         <!-- This is the row for all the upper content. Includes Company logo, descritption and image -->
         
@@ -42,7 +42,7 @@
       </section>
 
         <!-- This is the second row for the form -->
-        <section class="row align-items-center">
+        <section class="row ">
 
           <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
 
@@ -54,6 +54,7 @@
                     First Name needs to be 3 characters long or more
                 </div>
               </div>
+              
               <div class="form-group">
                 <label class="pb-2 mt-3" for="formGroupExampleInput2">About yourself:</label>
                 <input type="text" class="form-control pb-5" id="formGroupExampleInput2" placeholder="I am dedicated and hardworking." required>
@@ -61,13 +62,29 @@
                 <div class="invalid-feedback">
                     About me section needs to be at least 10 characters or more
                   </div>
-              </div>
-          </div>
-          <br />
+                
+                  
+                  <select class="form-control my-3" id="new-task-status">
+                    <option selected>Select status ↓</option>
+                    <option>Pending</option>
+                    <option>In progress</option>
+                    <option>Pending</option>
+                  </select>
 
-          <div class="col-sm-12 col-md-5 col-xl-3">
+
+
+
+              </div>
+
+              
+
+
+          </div>
+          <br/>
+
+          <div class="col-sm-12 col-md-5 col-xl-3 mt-5">
      
-                <select class="section_2 form-control form-select form-control-sm mt-n1"  id="roles" required>
+                <select class="section_2 form-control form-select form-control-sm "  id="roles" required>
                 <option value="" selected disabled>Select role ↓</option>
                 <option>UX Designer</option>
                 <option>Junior Developer</option>
@@ -83,7 +100,7 @@
             <select class="section_2 form-control form-select form-control-sm" id="assign" required>
                   <option value="" selected disabled>Assign to ↓</option>
                   <option >Senior design Manager</option>
-                  <option>senior Developer</option>
+                  <option>Senior Developer</option>
                   <option>Tech Lead</option>
                   <option>CTO</option>
                   <option>Human Resources</option>
@@ -99,15 +116,9 @@
                     Please select the date of application
                   </div>
           </div>
-          <div class="form-row">
-            <div class="form-group col">
-              <select class="form-control" id="new-task-status">
-                <option selected>In Progress</option>
-                <option>Done</option>
-                <option>Pending</option>
-              </select>
-          </div>
-         </div>
+          
+              
+          
 
 
           <div class="col-sm-4 col-md-1 offset-xl-1">
