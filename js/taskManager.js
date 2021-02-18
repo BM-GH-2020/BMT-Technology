@@ -48,7 +48,7 @@ class TaskManager {
     this.currentId = currentId;
   }
 
-  addTask(userName, about, roles, assign, dateField, status) {
+  addTask(id, userName, about, roles, assign, dateField, status) {
     console.log(userName);
     this.currentId++;
     const task = {
@@ -83,12 +83,13 @@ class TaskManager {
     this.tasks.forEach((task) => {
       //console.log(task);
       let date = new Date(task.dateField);
-      let formattedDate = `Submitted on: ${
-        (date.getDay(), date.getMonth(), date.getYear())
-      }`;
+      let formattedDate = `Submitted on: ${Number(
+        (date.getDay(this.dateField),
+        date.getMonth(this.dateField),
+        date.getYear(this.dateField))
+      )}`;
       let taskHTML = createTaskHtml(
         task.id,
-        console.log(task.id),
         task.userName,
         task.about,
         task.assign,

@@ -95,6 +95,7 @@ form.addEventListener("submit", (event) => {
   } else {
     console.log(status.value);
     taskManager.addTask(
+      status.value,
       userName.value,
       about.value,
       roles.value,
