@@ -47,7 +47,7 @@ img {
 
 #formGroupExampleInput {
     background: #b2b1ca;
-    color:aliceblue;
+    color:black;
     border: 1px solid aliceblue;
     border-radius: 0;
 }
@@ -89,6 +89,10 @@ img {
     margin-top: -5px;   
 }
 
+#new-task-status {
+    max-width: 25vw;
+}
+
 #button {
     color:  #b2b1ca;
     background:aliceblue; 
@@ -113,5 +117,11 @@ img {
   color: aliceblue;
 }
 
+#tasks-list {
+    color: black;
+    width: 5%;
+    /*display: flex;
+    //align-items: flex-start;*/
+}
 
 
