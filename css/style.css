@@ -17,9 +17,10 @@ html {
     height: 20px;
     background: #b2b1ca;
     color: #b2b1ca;
-    margin-top: 
+    /* margin-top:  */
     /* margin-bottom: 15px; */
   }
+
 .form-control {
     background:  #b2b1ca;
 }
@@ -117,17 +118,16 @@ img {
     width:auto;
     visibility: visible;
 }
-
+/* 
 .card-body > .btn > a {
   text-decoration: none;
   color: aliceblue;
-}
+} */
 
 #tasks-list {
     color: black;
-    width: 5%;
-    /*display: flex;
-    //align-items: flex-start;*/
+    display: flex;
+    align-items: flex-start;
 }
 
 

@@ -10,7 +10,7 @@ const createTaskHtml = (
 ) => {
   console.log(userName);
   const html = `
-        <li class="card" style="min-width: 25vw" data-task-id="${id}">
+        <li class="card m-2"  data-task-id="${id}">
             <div class="card-body">
                 <h5 class="card-title">${userName}</h5>
                 <p class="card-text"> ${about} </p>
@@ -20,7 +20,7 @@ const createTaskHtml = (
                     <div class="col-6">
                         <p class="card-text"><b>${dateField}</b></p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-4">
                         <p class="card-text"><b>${status}</b></p>
                     </div>
                     <div class="col-3">
@@ -97,10 +97,10 @@ class TaskManager {
       );
       tasksHtmlList.push(taskHTML);
     });
-    let taskHtml = `${tasksHtmlList.join("\n")}`;
+    let taskHtml = tasksHtmlList.join("\n");
     document.getElementById("tasks-list").innerHTML = taskHtml;
+    
   }
-
 
 
 save(){
@@ -126,6 +126,18 @@ load(){
   }
 }
 
+
+deleteTask(taskId) {
+  const newTasks = [];
+  for (let i = 0; i < this.tasks.length; i++) {
+    const task = this.tasks[i];
+
+    if (task.id !== taskId) {
+      newTasks.push(task);
+    }
+  }
+  this.tasks = newTasks;
+  }
 
 }
 

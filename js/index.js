@@ -112,7 +112,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-document.getElementById("tasks-list").innerHTML = taskManager.render();
+// document.getElementById("tasks-list").innerHTML = taskManager.render();
 
 let taskList = document.querySelector("#tasks-list");
 
@@ -126,12 +126,24 @@ taskList.addEventListener("click", (event) => {
     task.status = "DONE";
     taskManager.save();
     taskManager.render();
-    
-    // console.log(task.status.value);
   }
+
+  //task 9: delete task
+
+  if (event.target.classList.contains('delete-button')){
+    const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+
+    const taskId = Number(parentTask.dataset.taskId);
+
+    taskManager.deleteTask(taskId);
+    taskManager.save();
+    taskManager.render();
+
+
+  }
+
 });
 
 
 
 
-console.log(taskHTML);
