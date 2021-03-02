@@ -16,8 +16,10 @@ const createTaskHtml = (
                 <p class="card-text">
                 ${about}
                 </p>
-                <p class="card-text">${roles} To</p>
-                <p class="card-text">${assign}</p>
+                <p class="card-text">Applying for: ${assign} </p>
+                <p class="card-text">To: ${roles}</p>
+                
+                
                 <div class="card-footer row">
                     <div class="col-6">
                         <p class="card-text"><b>${dateField}</b></p>
@@ -83,11 +85,14 @@ class TaskManager {
     this.tasks.forEach((task) => {
       //console.log(task);
       let date = new Date(task.dateField);
-      let formattedDate = `Submitted on: ${Number(
-        (date.getDay(this.dateField),
-        date.getMonth(this.dateField),
-        date.getYear(this.dateField))
-      )}`;
+      let formattedDate =
+        "Submitted on: " +
+        (date.getDate(this.dateField) +
+          "." +
+          date.getMonth(this.dateField) +
+          "." +
+          date.getFullYear(this.dateField));
+
       let taskHTML = createTaskHtml(
         task.id,
         task.userName,
@@ -100,6 +105,10 @@ class TaskManager {
       tasksHtmlList.push(taskHTML);
     });
     let taskHtml = `${tasksHtmlList.join("\n")}`;
-    document.getElementById("tasks-list").innerHTML = taskHtml;
+    let taskItems = document.getElementById("tasks-list");
+    taskItems.innerHTML = taskHtml;
+    if (taskItems.innerHTML === "undefined") {
+      taskItems.innerHTML = " ";
+    }
   }
 }
