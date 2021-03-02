@@ -10,6 +10,7 @@ let submit = document.querySelector("#button");
 let invalidation = document.querySelector(".invalid-feedback");
 let validation = document.querySelector(".valid-feedback");
 let status = document.querySelector("#new-task-status");
+let taskList = document.querySelector("#tasks-list");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -56,10 +57,27 @@ form.addEventListener("submit", (event) => {
     userName.classList.remove("is-invalid");
     userName.classList.add("is-valid");
   }
-  /* if (dateField === NaN) {
-        dateField.classList.add("is-invalid"); 
-      dateField.classList.remove("is-valid"); 
-    } */
+
+  /*
+  let currentDate = new Date(Date.now())
+    .toLocaleString()
+    .split(",")[0]
+    .split("/");
+  let day = currentDate[0];
+  let month = currentDate[1];
+  let year = currentDate[2];
+  let taskDueDate = dateField.value.split("-");
+  */
+
+  if (dateField === null) {
+    dateField.classList.add("is-invalid");
+    dateField.classList.remove("is-valid");
+    validationFailure++;
+  } else if (dateField.value !== null) {
+    dateField.classList.remove("is-invalid");
+    dateField.classList.add("is-valid");
+  }
+
   if (assign.value) {
     assign.classList.remove("is-invalid");
     assign.classList.add("is-valid");
@@ -109,11 +127,9 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-document.getElementById("tasks-list").innerHTML = taskManager.render();
-
-let taskList = document.querySelector("#tasks-list");
-
 taskList.addEventListener("click", (event) => {
+  document.getElementById("tasks-list").innerHTML = taskManager.render();
+
   if (event.target.classList.contains("done-button")) {
     const parentTask =
       event.target.parentElement.parentElement.parentElement.parentElement;
@@ -122,7 +138,6 @@ taskList.addEventListener("click", (event) => {
     let task = taskManager.getTaskById(taskId);
     task.status = "DONE";
     taskManager.render();
-    console.log(task.status.value);
   }
 });
 
